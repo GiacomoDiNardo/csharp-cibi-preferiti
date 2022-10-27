@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
 //Esercizio mattina
 
 string[] cibiPreferiti = { "Bistecca di maiale", "Tordelli Lucchesi", "Risotto ai frutti di mare", "Spaghetti allo scoglio", "Pizza", "Pasta all' arrabbiata"};
@@ -161,4 +162,43 @@ for(int i = 0; i < sixNumbers.Length; i++)
 //Snack8.
 //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in
 //posizione dispari.
+
+Console.WriteLine();
+
+int[] ints = { 4, 6, 7, 2, 5, 3, 9, 6, 3, 5, 1, 34 };
+int sum = 0;
+
+for (int i = 0; i < ints.Length; i++)
+{
+
+    if (i % 2 == 0)
+    {
+        sum = sum + ints[i];
+    }
+}
+
+Console.WriteLine("la somma dei valori in posizione pari è " + sum);
+
+//Snack9.
+//Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+//Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la
+//somma degli elementi è minore di 50.
+
+int[] sum50 = new int[50];
+
+int somma = 0;
+while (somma < 50)
+{
+    int i = 0;
+    Console.WriteLine("inserisci un numero");
+    int insertNum = Convert.ToInt32(Console.ReadLine());
+
+    somma = somma + insertNum;
+
+    sum50[i] = insertNum;
+
+    i++;
+}
+
+Console.WriteLine("la somma dei numeri inseriti è " + somma);
 
