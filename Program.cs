@@ -38,15 +38,20 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 
 if(num1 > num2)
 {
+    Console.WriteLine();
     Console.WriteLine("il numero più alto è: " + num1);
 } else
 {
+    Console.WriteLine();
     Console.WriteLine("il numero più alto è: " + num2);
 }
 
 //Snack2.
 //L’utente inserisce due parole in successione.
 //Il software stampa prima la parola più corta, poi la parola più lunga.
+
+Console.WriteLine();
+
 
 Console.WriteLine("inserisci due parole:");
 
@@ -55,9 +60,105 @@ string parola2 = Console.ReadLine();
 
 if (parola2.Length > parola1.Length)
 {
+    Console.WriteLine();
+
     Console.WriteLine("La parola più lunga è {0}, la più corta è {1}.", parola2, parola1);
 }else
 {
+    Console.WriteLine();
+
     Console.WriteLine("La parola più lunga è {1}, la più corta è {0}.", parola2, parola1);
 }
+
+//Snack3.
+//Il software deve chiedere per 10 volte all’utente di inserire un numero.
+//Il programma stampa la somma di tutti i numeri inseriti.
+
+Console.WriteLine();
+
+int[] arrayNum = new int[10];
+for (int i = 0; i < arrayNum.Length; i++)
+{
+    Console.WriteLine("inserisci un numero");
+    arrayNum[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine();
+
+Console.WriteLine("la somma dei valori inseriti è: " + arrayNum.Sum());
+
+
+//Snack4.
+//Calcola la somma e la media dei numeri da 2 a 10.
+Console.WriteLine();
+
+
+int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+Console.WriteLine();
+
+Console.WriteLine("la somma dei valori inseriti è: " + numbers.Sum());
+
+Console.WriteLine();
+
+Console.WriteLine("la media dei valori inseriti è: " + numbers.Sum()/numbers.Length);
+
+
+//Snack5.
+//Il software chiede all’utente di inserire un numero. Se il numero inserito è pari,
+//stampa il numero, se è dispari, stampa il numero successivo.
+
+Console.WriteLine();
+
+Console.WriteLine("inserisci un numero:");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if(number % 2 == 0)
+{
+Console.WriteLine("il numero pari più vicino è: " + number);
+}else
+{
+    Console.WriteLine("il numero pari più vicino è: " + (number + 1));
+}
+
+//Snack6.
+//In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+//Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla
+//festa.
+Console.WriteLine();
+
+Console.WriteLine("inserisci il tuo nome");
+
+Console.WriteLine();
+
+string[] invitati = { "marco", "matteo", "giovanni", "luca", "fabio" };
+
+string nome = Console.ReadLine();
+
+if(Array.Exists(invitati, x => x == nome))
+{
+    Console.WriteLine("il suo nome è tra gli invitati, può entrare.");
+}else
+{
+    Console.WriteLine("non è tra gli invitati, mi dispiace.");
+}
+
+//Snack7.
+//Crea un array vuoto.
+//Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
+//nell’array
+
+int[] sixNumbers = new int[6];
+for(int i = 0; i < sixNumbers.Length; i++)
+{
+    Console.WriteLine("inserisci un numero:");
+    int insert = Convert.ToInt32(Console.ReadLine());
+    if(insert % 2 != 0)
+    {
+    sixNumbers[i] = insert;
+    }
+}
+
+//Snack8.
+//Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in
+//posizione dispari.
 
