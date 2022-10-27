@@ -31,23 +31,27 @@ Console.WriteLine();
 //Snack 1
 //L’utente inserisce due numeri in successione. Il software stampa il maggiore.
 
-int num1 = 9;
-int num2 = 7;
+Console.WriteLine("inserisci due numeri:");
+
+int num1 = Convert.ToInt32(Console.ReadLine());
+int num2 = Convert.ToInt32(Console.ReadLine());
 
 if(num1 > num2)
 {
-    Console.WriteLine(num1);
+    Console.WriteLine("il numero più alto è: " + num1);
 } else
 {
-    Console.WriteLine(num2);
+    Console.WriteLine("il numero più alto è: " + num2);
 }
 
 //Snack2.
 //L’utente inserisce due parole in successione.
 //Il software stampa prima la parola più corta, poi la parola più lunga.
 
-string parola1 = "sasso";
-string parola2 = "scritto";
+Console.WriteLine("inserisci due parole:");
+
+string parola1 = Console.ReadLine();
+string parola2 = Console.ReadLine();
 
 if (parola2.Length > parola1.Length)
 {
