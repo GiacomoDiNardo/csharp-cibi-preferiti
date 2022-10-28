@@ -206,18 +206,77 @@
 //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
 //Ogni volta che ne crei uno, stampalo a schermo.
 
-Console.WriteLine("inserisci il numero di array desiderati");
+//Console.WriteLine("inserisci il numero di array desiderati");
 
-int n = Convert.ToInt32(Console.ReadLine());
-Random randNum = new Random();
+//int n = Convert.ToInt32(Console.ReadLine());
+//Random randNum = new Random();
 
-for (int i = 0; i < n; i++)
+//for (int i = 0; i < n; i++)
+//{
+//    int[] arrayN = new int[10];
+//    Console.WriteLine();
+//    for (int j = 0; j < 10; j++)
+//    {
+//        arrayN[j] = randNum.Next(1,101);
+//        Console.WriteLine(arrayN[j]);
+//    }
+//}
+
+
+//Esercizi Funzioni
+
+//Snack 1
+// Dare la possibilità di inserire due parole.
+// Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+// Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+//Console.WriteLine("Inserisci una parola");
+//string firstWord = Console.ReadLine();
+//Console.WriteLine("Inserisci una parola");
+//string secondWord = Console.ReadLine();
+
+//int wordLength (string word)
+//{
+//    return word.Length;
+//};
+
+//if(wordLength(firstWord) == wordLength(secondWord)) 
+//{
+//    Console.WriteLine("la parola " + firstWord + " e " + secondWord + "hanno la stessa lunghezza");
+//} else if(wordLength(firstWord) > wordLength(secondWord))
+//{
+//    Console.WriteLine("la parola " + firstWord + "è più lunga");
+//} else
+//{
+//    Console.WriteLine("la parola " + secondWord + "è più lunga");
+//}
+
+
+//Snack 2
+
+//    Scrivere una funzione per verificare se un numero è pari o dispari.
+//    Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.
+
+bool odd = false;
+
+bool isOdd (int number)
 {
-    int[] arrayN = new int[10];
-    Console.WriteLine();
-    for (int j = 0; j < 10; j++)
+    if (number % 2 != 0)
     {
-        arrayN[j] = randNum.Next(1,101);
-        Console.WriteLine(arrayN[j]);
+        return odd = true;
     }
+    return odd = false;
+}
+
+Console.WriteLine("inserisci un numero");
+
+int insertNum = Convert.ToInt32(Console.ReadLine());
+odd = isOdd (insertNum);
+
+if (odd == true)
+{
+    Console.WriteLine("il numero inserito è dispari");
+} else
+{
+    Console.WriteLine("il numero inserito è pari");
 }
